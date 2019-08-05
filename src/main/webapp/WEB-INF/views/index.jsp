@@ -9,11 +9,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-<span>Current User: ${preference.yourname }</span>
 <br>
-<a href="/admin">Admin Page</a>
-
-
 
 <h1>Welcome to the Coffee Shop App</h1>
 <h2> Menu</h2>
@@ -33,7 +29,7 @@
 				</tr>
 			</c:forEach>
 				<c:if test="${ empty preference.yourname }">
-			<a href="/login">Log in</a>
+			
 			
 		</c:if>
 		<c:if test="${ not empty preference.yourname }">
@@ -44,8 +40,10 @@
 		</c:if>
 			</tbody>
 		</table>
+		<a href="/login">Log in</a>
+		<p> Don't have an account? <a href="/register">Register</a> here.</p>
 		
-		<p> <a href="/register">Go</a></p>
+		<a href="/admin">Admin Page</a>
 
 </body>
 </html>

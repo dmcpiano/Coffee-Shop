@@ -10,7 +10,6 @@ import org.springframework.stereotype.Repository;
 
 import co.grandcircus.CoffeeShop.entity.Product;
 
-
 @Repository
 @Transactional
 public class ProductDao {

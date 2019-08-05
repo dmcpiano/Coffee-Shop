@@ -9,8 +9,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name="User")
 
-
-
 public class User {
 	
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -63,7 +61,6 @@ public class User {
 	public void setYourname(String yourname) {
 		this.yourname = yourname;
 	}
-
 
 	@Override
 	public String toString() {

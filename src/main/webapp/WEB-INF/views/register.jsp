@@ -10,9 +10,10 @@
 <body>
 <h1>Register</h1>
 <form action="/register-result" method="post">
-	<p>UserName: <input type="text" name= "username" required/> </p>
-	<p>Password: <input type="password" name= "password" required/> </p>
-	<p> Your Name: <input type="text" name= "yourname" required/> </p>
+	<p> Name: <input type="text" name= "yourname" required/> </p>
+	<p>Create username: <input type="text" name= "username" required/> </p>
+	<p>Create password: <input type="password" name= "password" required/> </p>
+	
 	<p><input type="submit"/></p>
 </form>
 <a href="/">Home</a>

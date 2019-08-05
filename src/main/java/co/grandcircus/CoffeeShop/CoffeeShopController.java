@@ -32,9 +32,10 @@ public class CoffeeShopController {
 	}
 
 	@RequestMapping("/register")
-	public ModelAndView showRegister() {
+	public ModelAndView showRegister(User user) {
 		return new ModelAndView("register");
 	}
+	
 
 	@Autowired
 	private UserDao daoUser;
@@ -87,16 +88,13 @@ public class CoffeeShopController {
 		HttpSession session
 			) {
 		
-		// check the database for the user that matches both email and password
 		User user = das.findByUsernameAndPassword(username, password);
 		System.out.println(user);
 		
-		// if not found, show the form again with error message
 		if (user == null) {
 			return new ModelAndView("login-form", "message", "Incorrect username or password.");
 		}
 		
-		// "login" just means adding the user to the session
 		session.setAttribute("preference", user);
 		
 		return new ModelAndView("redirect:/");
